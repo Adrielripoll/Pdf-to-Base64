@@ -1,0 +1,11 @@
+input{
+    width: 50vw;
+    height: 10vw;
+    font-size: 20px
+}
+
+.titulo{
+    font-size: 10px;
+    width: 1000px;
+    resize: none;
+}
