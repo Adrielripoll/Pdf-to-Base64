@@ -1,5 +1,4 @@
 const express = require('express')
-const pdf2 = require('pdf-to-base64')
 const path = require('path')
 const app = express()
 const encondeController = require('./encondeController')
