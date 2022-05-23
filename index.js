@@ -1,18 +1,12 @@
 const express = require('express')
 const pdf2 = require('pdf-to-base64')
-const bodyParser = require('body-parser')
 const path = require('path')
 const app = express()
+const encondeController = require('./encondeController')
 
 app.use("/", express.static(path.join(__dirname, "public")));
+app.use(express.json())
 
-app.post("/encode", bodyParser.json(), (req, res)=>{
-    var url = req.body.url1
-
-    pdf2(url).then((response)=>{
-        res.send({response})
-    })
-    
-})
+app.post("/encode", encondeController)
 
 app.listen(3000, console.log("server running"));
